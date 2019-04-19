@@ -45,8 +45,8 @@ This part was already a job well done, thanks to the creators of the dataset, al
 Using the dataset at the end of the last step another dataset was created which consisted of the means of each of the columns grouped by subject and activity. This was achieved by a `mutate()` call to convert the subject id's to a factor, followed by a call to `group_by` so as to group by subject id and activity, finally a call to `summarise_all()` with the argument `mean`.
 
 ### The Variables
- The variables activity and subjectid indicate respectively, the activity label and the id of the subject each row is associated with.
- The variables other than `subjectid` and `activity` are either mean or standard deviations of some measurements, in both time domain and frequency domain. Time domain signals have a 't' prefix whereas frequency domain signals have an 'f' prefix. The frequency domain signals were obtained by applying a FFT(Fast Fourier Transform) to the time domain signals. The measurements are named as such:
+ The variables activity and subjectid indicate respectively, the activity label and the id of the subject each row is associated with. The subjectid and activity columns are factors.
+ The variables other than `subjectid` and `activity` are either mean or standard deviations of some measurements, in both time domain and frequency domain. These columns are of type double. Time domain signals have a 't' prefix whereas frequency domain signals have an 'f' prefix. The frequency domain signals were obtained by applying a FFT(Fast Fourier Transform) to the time domain signals. The measurements are named as such:
  - tBodyAcc-XYZ
  - tGravityAcc-XYZ
  - tBodyAccJerk-XYZ
